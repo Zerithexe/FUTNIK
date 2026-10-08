@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Futnık Üretim Tesisleri — fındık, hamsi, PlayStation kafe, hayvancılık ve e-spor." />
+  <meta name="theme-color" content="#0a0c10" />
+  <title>Futnık | Üretim Tesisleri</title>
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="bootScreen" class="boot-screen" aria-hidden="false">
+    <div class="boot-grid"></div>
+    <div class="boot-panel">
+      <div class="boot-logo"><span class="logo-mark">F</span><span>FUTNIK</span></div>
+      <div class="boot-kicker">FUTNIK ÜRETİM TESİSLERİ</div>
+      <h1>Sisteme hoş geldiniz.</h1>
+      <p>Fındıktan e-spora kadar tamamen gereksiz ama son derece ciddi bir üretim ağı başlatılıyor.</p>
+      <div class="boot-progress"><span id="bootBar"></span></div>
+      <div class="boot-status" id="bootStatus">Tesis bağlantısı kuruluyor…</div>
+      <button id="enterBtn" class="btn btn-primary boot-enter" disabled>Sisteme Giriş</button>
+    </div>
+  </div>
+
+  <div id="app" class="app-shell is-hidden">
+    <header class="site-header" id="top">
+      <a class="brand" href="#top" aria-label="Futnık ana sayfa">
+        <span class="logo-mark">F</span>
+        <span>
+          <strong>FUTNIK</strong>
+          <small>ÜRETİM TESİSLERİ</small>
+        </span>
+      </a>
+      <nav class="main-nav" aria-label="Ana menü">
+        <a href="#home">Ana Sayfa</a>
+        <a href="#units">Birimler</a>
+        <a href="#services">Hizmetler</a>
+        <a href="#operations">Operasyon</a>
+        <a href="#team">Geliştiriciler</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn" id="systemBtn" title="Sistem mesajı" aria-label="Sistem mesajı">⌁</button>
+        <button class="cart-btn" id="cartBtn">Sepet <span id="cartCount">0</span></button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero section" id="home">
+        <div class="hero-copy reveal">
+          <div class="eyebrow"><span class="dot"></span> TESİSLER AKTİF · 24/7 CİDDİYET</div>
+          <h1>Fındıktan <span>e-spora</span>,<br />her şey tek çatı altında.</h1>
+          <p class="hero-lead">Futnık; fındık, hamsi, PlayStation, hayvancılık ve profesyonel e-spor yatırımlarını aynı kurumsal ciddiyetsizlik altında birleştiren yeni nesil üretim ağıdır.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#units">Tesisleri Keşfet</a>
+            <button class="btn btn-ghost" id="briefingBtn">Yönetim Brifingi →</button>
+          </div>
+          <div class="hero-micro"><span>●</span> Son denetim: "Makul seviyede saçmalık"</div>
+        </div>
+        <div class="hero-visual reveal delay-1">
+          <div class="orb orb-a"></div><div class="orb orb-b"></div>
+          <div class="command-card">
+            <div class="command-head"><span>FUTNIK / CORE</span><span class="live-pill">LIVE</span></div>
+            <div class="command-title">Üretim Konsolu</div>
+            <div class="command-row"><span>Fındık hattı</span><strong>84%</strong></div>
+            <div class="meter"><span style="width:84%"></span></div>
+            <div class="command-row"><span>Hamsi lojistiği</span><strong>61%</strong></div>
+            <div class="meter"><span style="width:61%"></span></div>
+            <div class="command-row"><span>İnek sağım sistemi</span><strong>93%</strong></div>
+            <div class="meter"><span style="width:93%"></span></div>
+            <div class="command-row"><span>E-spor akademisi</span><strong>77%</strong></div>
+            <div class="meter"><span style="width:77%"></span></div>
+            <div class="command-foot"><span>Durum</span><strong>Her şey kontrol altında.</strong></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="ticker" aria-label="Futnık durum akışı">
+        <div>FUTNIK TESİSLERİ</div><div>•</div><div>FINDIK KABUKLAMA</div><div>•</div><div>HAMSİ LOJİSTİK</div><div>•</div><div>PS5 OPERASYON</div><div>•</div><div>ESPORT AKADEMİ</div><div>•</div><div>İNEK SÜT TEKNOLOJİLERİ</div>
+      </section>
+
+      <section class="section" id="units">
+        <div class="section-head reveal">
+          <div><div class="section-kicker">01 / BİRİMLER</div><h2>Futnık'ın ana üretim hatları.</h2></div>
+          <p>Her biri kendi KPI'ına, operasyon ekibine ve tamamen mantıksız bir şekilde kurumsallaştırılmış görev tanımına sahip.</p>
+        </div>
+        <div class="unit-grid" id="unitGrid">
+          <article class="unit-card featured reveal" data-cat="gıda">
+            <div class="card-top"><span class="card-index">01</span><span class="status">AKTİF</span></div>
+            <div class="unit-icon">◒</div>
+            <h3>Fındık Üretim & Satış</h3>
+            <p>Futnık'ın çekirdek operasyonu. Kavrulmuş, çiğ, premium ve “hangi fındık olduğu belirsiz” paketler.</p>
+            <div class="card-meta"><span>Stok</span><strong>2.480 kg</strong></div>
+            <button class="link-btn add-service" data-name="Premium Fındık Paketi" data-price="349">Paketi Gör →</button>
+          </article>
+          <article class="unit-card reveal delay-1" data-cat="eğlence">
+            <div class="card-top"><span class="card-index">02</span><span class="status">AÇIK</span></div>
+            <div class="unit-icon">◈</div>
+            <h3>PlayStation Kafe</h3>
+            <p>4K ekran, koltuk, turnuva masaları ve kaybedenin çayı söylediği gelişmiş sosyal oyun laboratuvarı.</p>
+            <div class="card-meta"><span>Boş istasyon</span><strong>07 / 20</strong></div>
+            <button class="link-btn add-service" data-name="PS5 1 Saat" data-price="120">Seans Ekle →</button>
+          </article>
+          <article class="unit-card reveal delay-2" data-cat="gıda">
+            <div class="card-top"><span class="card-index">03</span><span class="status">SEVKİYAT</span></div>
+            <div class="unit-icon">≈</div>
+            <h3>Hamsi Satış & Lojistik</h3>
+            <p>Karadeniz menşeli ürün yönetimi. Soğuk zincir, kasa optimizasyonu ve gereğinden fazla ciddi lojistik.</p>
+            <div class="card-meta"><span>Günlük kapasite</span><strong>850 kasa</strong></div>
+            <button class="link-btn add-service" data-name="Hamsi Kasası" data-price="690">Kasa Gör →</button>
+          </article>
+          <article class="unit-card reveal" data-cat="tarım">
+            <div class="card-top"><span class="card-index">04</span><span class="status">SAĞIMDA</span></div>
+            <div class="unit-icon">◉</div>
+            <h3>Hayvancılık & İnek Sağma</h3>
+            <p>Modern sağım hattı, yem planlama, süt tankı ve her sabah “Mooorning meeting”.</p>
+            <div class="card-meta"><span>Aktif sürü</span><strong>48 inek</strong></div>
+            <button class="link-btn add-service" data-name="Günlük Süt Kota Paketi" data-price="240">Kota Gör →</button>
+          </article>
+          <article class="unit-card reveal delay-1" data-cat="espor">
+            <div class="card-top"><span class="card-index">05</span><span class="status">SEÇMELER</span></div>
+            <div class="unit-icon">⌁</div>
+            <h3>E-Sporcu Yetiştirme</h3>
+            <p>Refleks, aim, mental dayanıklılık ve “takım arkadaşına bağırmadan round kazanma” eğitimi.</p>
+            <div class="card-meta"><span>Akademi kapasitesi</span><strong>32 oyuncu</strong></div>
+            <button class="link-btn add-service" data-name="E-Spor Deneme Seansı" data-price="499">Seçmelere Gir →</button>
+          </article>
+          <article class="unit-card reveal delay-2" data-cat="diğer">
+            <div class="card-top"><span class="card-index">06</span><span class="status">AR-GE</span></div>
+            <div class="unit-icon">✦</div>
+            <h3>Futnık AR-GE</h3>
+            <p>Henüz açıklanmayan projeler: fındık aromalı enerji içeceği, HamsiOS ve kendi kendine süt sağan inek.</p>
+            <div class="card-meta"><span>Gizlilik seviyesi</span><strong>MAX</strong></div>
+            <button class="link-btn" id="secretBtn">Dosyayı İncele →</button>
+          </article>
+        </div>
+      </section>
+
+      <section class="section muted-section" id="services">
+        <div class="section-head reveal">
+          <div><div class="section-kicker">02 / HİZMETLER</div><h2>Şirket kadar ciddi, içerik kadar saçma.</h2></div>
+          <p>İhtiyacınız olan hizmeti seçin. Sepet sistemi demomuz çalışır; ödeme sistemi ise özellikle çalışmıyor.</p>
+        </div>
+        <div class="filter-bar reveal">
+          <button class="filter active" data-filter="all">Tümü</button>
+          <button class="filter" data-filter="gıda">Gıda</button>
+          <button class="filter" data-filter="eğlence">Eğlence</button>
+          <button class="filter" data-filter="tarım">Tarım</button>
+          <button class="filter" data-filter="espor">E-spor</button>
+        </div>
+        <div class="service-showcase">
+          <div class="service-panel reveal">
+            <div class="service-feature-number">F-01</div>
+            <span class="section-kicker">Günün fırsatı</span>
+            <h3>Premium Karadeniz Fındığı<br /><em>+ kurumsal saçmalık</em></h3>
+            <p>Kırılma oranı düşük, karizma oranı yüksek. Yanında resmi Futnık sertifikası.</p>
+            <div class="price-row"><strong>₺349</strong><span>kutu başı</span></div>
+            <button class="btn btn-primary add-service" data-name="Premium Fındık Paketi" data-price="349">Sepete ekle</button>
+          </div>
+          <div class="service-list reveal delay-1">
+            <button class="service-line add-service" data-name="PS5 1 Saat" data-price="120"><span>PS5 Kafe / 1 saat</span><strong>₺120</strong><i>+</i></button>
+            <button class="service-line add-service" data-name="Hamsi Kasası" data-price="690"><span>Hamsi Kasası / Günlük</span><strong>₺690</strong><i>+</i></button>
+            <button class="service-line add-service" data-name="Günlük Süt Kota Paketi" data-price="240"><span>Süt Kota Paketi</span><strong>₺240</strong><i>+</i></button>
+            <button class="service-line add-service" data-name="E-Spor Deneme Seansı" data-price="499"><span>E-spor Deneme Seansı</span><strong>₺499</strong><i>+</i></button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="operations">
+        <div class="section-head reveal">
+          <div><div class="section-kicker">03 / OPERASYON MERKEZİ</div><h2>Tesislerde ne oluyor?</h2></div>
+          <p>Canlıymış gibi duran ama tamamen eğlence amaçlı hazırlanmış demo operasyon ekranı.</p>
+        </div>
+        <div class="ops-grid">
+          <div class="ops-card large reveal">
+            <div class="ops-head"><span>Operasyon akışı</span><span id="clock">00:00:00</span></div>
+            <div class="timeline" id="timeline">
+              <div><span class="timeline-dot good"></span><section><strong>Fındık hattı aktif</strong><small>Kavrulma sıcaklığı optimum.</small></section><time>08:42</time></div>
+              <div><span class="timeline-dot good"></span><section><strong>Hamsi sevkiyatı çıktı</strong><small>12 kasa yola verildi.</small></section><time>09:18</time></div>
+              <div><span class="timeline-dot warn"></span><section><strong>PS5-07 bakım bildirimi</strong><small>Kumanda yine “kayboldu”.</small></section><time>10:06</time></div>
+              <div><span class="timeline-dot hot"></span><section><strong>E-spor seçmeleri başladı</strong><small>Aim seviyesi şimdilik tartışmalı.</small></section><time>10:30</time></div>
+            </div>
+          </div>
+          <div class="ops-card reveal delay-1">
+            <div class="ops-head"><span>Kaynaklar</span><span>LIVE</span></div>
+            <div class="resource"><div><span>Fındık</span><strong>84%</strong></div><div class="mini-meter"><span style="width:84%"></span></div></div>
+            <div class="resource"><div><span>Süt</span><strong>93%</strong></div><div class="mini-meter"><span style="width:93%"></span></div></div>
+            <div class="resource"><div><span>Hamsi</span><strong>61%</strong></div><div class="mini-meter"><span style="width:61%"></span></div></div>
+            <div class="resource"><div><span>Oyuncu</span><strong>77%</strong></div><div class="mini-meter"><span style="width:77%"></span></div></div>
+          </div>
+          <div class="ops-card reveal delay-2">
+            <div class="ops-head"><span>Kurumsal KPI</span><span>2026</span></div>
+            <div class="kpi"><strong>17</strong><span>Aktif proje</span></div>
+            <div class="kpi"><strong>48</strong><span>İnek</span></div>
+            <div class="kpi"><strong>32</strong><span>E-spor oyuncusu</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section manifesto-section">
+        <div class="manifesto reveal">
+          <div class="section-kicker">04 / FUTNIK MANİFESTO</div>
+          <blockquote>“Bir şirket aynı anda hem fındık satıp hem e-sporcu yetiştirebiliyorsa, buna iş modeli değil, <span>Futnık</span> denir.”</blockquote>
+          <div class="signature">— Yönetim Kurulu, muhtemelen 17:43'te</div>
+        </div>
+      </section>
+
+      <section class="section team-section" id="team">
+        <div class="section-head reveal">
+          <div><div class="section-kicker">05 / GELİŞTİRİCİLER</div><h2>Bu kaosun arkasındaki ekip.</h2></div>
+          <p>Sitenin bütün kararları, üretim kapasitesi ve gereksiz kurumsal dili aşağıdaki yönetim ekibi üstlenmektedir.</p>
+        </div>
+        <div class="team-grid">
+          <article class="person reveal"><span>MAE</span><div><strong>Mert Ali Erol</strong><small>Kurucu / Sistem Mimarı</small></div></article>
+          <article class="person reveal delay-1"><span>MAT</span><div><strong>Muhammet Atalay</strong><small>Operasyon & Strateji</small></div></article>
+          <article class="person reveal delay-2"><span>MFÇ</span><div><strong>Muhammed Efe Çiçek</strong><small>Ürün & Tasarım</small></div></article>
+          <article class="person reveal"><span>KTD</span><div><strong>Kağan Taha Demirci</strong><small>E-spor Birimi</small></div></article>
+          <article class="person reveal delay-1"><span>ÖFK</span><div><strong>ÖMER FURKAN KÖSEOĞLU</strong><small>Finans & Fındık</small></div></article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div><strong>FUTNIK</strong><span>Üretim Tesisleri · 2026</span></div>
+      <div><span>Bu site tamamen eğlence amaçlıdır.</span><button id="panicBtn" class="text-btn">Acil Durum Merkezi</button></div>
+    </footer>
+  </div>
+
+  <aside id="cartDrawer" class="drawer" aria-hidden="true">
+    <div class="drawer-inner">
+      <div class="drawer-head"><div><span class="section-kicker">FUTNIK / CHECKOUT</span><h2>Sepet</h2></div><button class="close-btn" id="closeCart">×</button></div>
+      <div id="cartItems" class="cart-items"><div class="empty-cart">Henüz hiçbir şey seçmedin.<br /><small>Futnık ekonomisi seni bekliyor.</small></div></div>
+      <div class="cart-total"><span>Toplam</span><strong id="cartTotal">₺0</strong></div>
+      <button class="btn btn-primary full" id="fakeCheckout">Siparişi Onayla</button>
+      <small class="checkout-note">Demo ödeme sistemi. Gerçek para alınmaz.</small>
+    </div>
+  </aside>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
